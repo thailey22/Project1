@@ -1,6 +1,6 @@
 ﻿namespace Project1UI.Models
 {
-    public class UserModel
+    public class UserInfo
     {
         public string? Name { get; set; }
 

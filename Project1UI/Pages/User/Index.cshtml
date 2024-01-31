@@ -1,4 +1,21 @@
 ﻿@page
 @model Project1UI.Pages.User.IndexModel
 @{
+    ViewData["title"] = "User Index";
 }
+<h1>User index</h1>
+@if (!string.IsNullOrEmpty(Model.CurrentUser.Name))
+{
+    <h1>Welcome @Model.CurrentUser.Name</h1>
+    <h2>How does it feel to be @Model.CurrentUser.Age</h2>
+}
+
+else
+{
+    <h1>No Current User</h1>
+}
+
+<ul>
+    <li><a asp-page="Addinfo" asp-route-Name="James" asp-route-Age="32">Add Info For James</a></li>
+    <li><a asp-page="Addinfo" asp-route-Name="Tom" asp-route-Age="41">Add Info For Tom</a></li>
+</ul>

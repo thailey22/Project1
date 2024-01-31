@@ -1,15 +1,17 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
+using Project1UI.Models;
+using System.Xml.Linq;
 
 
 namespace Project1UI.Pages.User
 {
-    public class UserInfoModel : PageModel
+    public class AddInfoModel : PageModel
     {
 
         [BindProperty(SupportsGet = true)]
-        public UserInfoModel CurrentUser { get; set; } = new();
+        public UserInfo CurrentUser { get; set; } = new();
 
         private readonly ILogger<IndexModel> _logger;
 
@@ -22,7 +24,7 @@ namespace Project1UI.Pages.User
 
         public void OnGet()
         {
-           
+            _logger.LogInformation("OnGet executed");
         }
         public IActionResult OnPost()
         {
@@ -36,6 +38,7 @@ namespace Project1UI.Pages.User
             {
                 return Page();
             }
+            _logger.LogInformation("OnPost executed");
         }
     }
 }

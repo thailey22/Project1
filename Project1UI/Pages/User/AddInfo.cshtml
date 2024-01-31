@@ -1,0 +1,46 @@
+﻿@page
+@model Project1UI.Pages.User.AddInfoModel
+@{
+}
+
+<p>Person Info</p>
+
+<div>
+    post info
+    <form method="post">
+        <label asp-for="CurrentUser.Name"></label>
+        <input type="text" asp-for="CurrentUser.Name" />
+        <label asp-for="CurrentUser.Age"></label>
+        <input type="text" asp-for="CurrentUser.Age" />
+        <input type="submit" />
+
+
+    </form>
+
+</div>
+<br />
+
+<div>
+    post info
+    <form method="post" asp-page=".\Index">
+        <label asp-for="CurrentUser.Name"></label>
+        <input type="text" asp-for="CurrentUser.Name" />
+        <label asp-for="CurrentUser.Age"></label>
+        <input type="text" asp-for="CurrentUser.Age" />
+        <input type="submit" />
+
+
+    </form>
+
+</div>
+<br />
+
+<div>
+    <form method="post" asp-page="./Index">
+        <label asp-for="CurrentUser.Name"></label>
+        <input type="text" asp-for="CurrentUser.Name" />
+        <label asp-for="CurrentUser.Age"></label>
+        <input type="text" asp-for="CurrentUser.Age" />
+        <input type="submit" value="Submit" />
+    </form>
+</div>
