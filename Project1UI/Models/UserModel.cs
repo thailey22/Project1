@@ -2,9 +2,9 @@
 {
     public class UserModel
     {
-        public String name { get; set; }
+        public string? Name { get; set; }
 
-        public int age { get; set; }
+        public int? Age { get; set; }
 
     }
 }
