@@ -24,7 +24,7 @@ namespace Project1UI.Pages.User
 
         public void OnGet()
         {
-            _logger.LogInformation("OnGet executed");
+            _logger.LogInformation("OnGet from AddInfo");
         }
         public IActionResult OnPost()
         {
@@ -38,7 +38,7 @@ namespace Project1UI.Pages.User
             {
                 return Page();
             }
-            _logger.LogInformation("OnPost executed");
+            _logger.LogInformation("OnPost from AddInfo");
         }
     }
 }
