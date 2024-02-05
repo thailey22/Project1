@@ -28,6 +28,8 @@ namespace Project1UI.Pages.User
         }
         public IActionResult OnPost()
         {
+            _logger.LogInformation("OnPost from AddInfo");
+
             if (ModelState.IsValid)
             {
                 return RedirectToPage("./Index", CurrentUser);
@@ -38,7 +40,7 @@ namespace Project1UI.Pages.User
             {
                 return Page();
             }
-            _logger.LogInformation("OnPost from AddInfo");
+           
         }
     }
 }
